@@ -3,6 +3,8 @@ import RPi.GPIO as GPIO
 import time
 import os
 
+#Kindly change the pin numbers according to your needs. Extra pins have been setup and used for indicator leds
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(18,GPIO.OUT)
@@ -27,30 +29,6 @@ def stoppen():
     GPIO.output(14,False)
     GPIO.output(22,False)
     GPIO.output(23,False)
-
-##def distance():
-##    GPIO.setmode(GPIO.BCM)
-##    GPIO.setup(21,GPIO.OUT)
-##    GPIO.setup(19,GPIO.IN)
-##
-##    time.sleep(0.1)
-##
-##    GPIO.output(21,True)
-##    time.sleep(00001)
-##    GPIO.output(21,False)
-##
-##    while GPIO.input(19) == False:
-##        start = time.time()
-##
-##    while GPIO.input(19) == True:
-##        end = time.time()
-##
-##    t = end - start
-##    print(t)
-##    dis = t * 17000
-##
-##    return dis
-##print(distance())
 
 GPIO.output(21,True)
 
